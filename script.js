@@ -155,8 +155,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const welcomeDiv = document.createElement("div");
             welcomeDiv.className = "welcome-message";
             welcomeDiv.innerHTML = `
-                <h1>Pollination Chat</h1>
-                <p>Start a conversation with Pollination AI.</p>
+                <h1>AI Chat</h1>
+                <p>Made by Ajay Anto</p>
             `;
             chatContainer.appendChild(welcomeDiv);
         } else {
