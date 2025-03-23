@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pollination Chat</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- Add Marked.js for markdown parsing -->
+        <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
+        <!-- Add DOMPurify for security -->
+        <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.0/dist/purify.min.js"></script>
+    </head>
+
+    <body>
+        <div class="app-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <button id="new-chat-btn" class="new-chat-btn">+ New Chat</button>
+                </div>
+                <div class="chat-history" id="chat-history">
+                    <!-- Chat history items will be added here -->
+                </div>
+            </aside>
+
+            <!-- Main chat area -->
+            <main class="main-content">
+                <div class="model-selector-container">
+                    <select id="model-selector" class="model-selector">
+                        <option value="openai">OpenAI</option>
+                        <option value="openai-large">OpenAI Large</option>
+                        <option value="mistral">Mistral</option>
+                        <option value="claude-hybridspace">Claude Hybrid Space</option>
+                        <option value="openai-reasoning">OpenAI Reasoning (o3-mini)</option>
+                    </select>
+
+                    <div class="reasoning-effort-container" id="reasoning-effort-container" style="display: none;">
+                        <label for="reasoning-effort">Reasoning Effort:</label>
+                        <select id="reasoning-effort" class="reasoning-effort">
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="chat-container" id="chat-container">
+                    <!-- Messages will be added here -->
+                    <div class="welcome-message">
+                        <h1>Pollination Chat</h1>
+                        <p>Start a conversation with Pollination AI.</p>
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <textarea id="user-input" placeholder="Type your message here..." rows="1"></textarea>
+                    <button id="send-btn" class="send-btn">Send</button>
+                </div>
+            </main>
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</html>
